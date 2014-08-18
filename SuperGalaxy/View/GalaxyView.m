@@ -30,7 +30,7 @@
     NSDate *methodFinish = [NSDate date];
     NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
     
-    logInfo(@"executionTime =%@; it=%d", @(executionTime), pointsCount);
+    logInfo([NSString stringWithFormat:@"executionTime =%f; it=%d", executionTime, pointsCount]);
 }
 
 /**

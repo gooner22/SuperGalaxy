@@ -10,23 +10,15 @@
 
 @implementation LoggingUtils
 
-void logError(NSString *message, ...){
-    va_list arguments;
-    logMessage(@"ERROR", message, arguments);
+void logError(NSString *message){
+    logMessage(@"ERROR", message);
 }
 
-void logInfo(NSString *message, ...){
-    va_list arguments;
-    logMessage(@"INFO", message, arguments);
+void logInfo(NSString *message){
+    logMessage(@"INFO", message);
 }
 
-void logMessage(NSString *level, NSString *message, ...){
-    va_list arguments;
-
-    va_start(arguments, message);
-    NSString * str = [[NSString alloc] initWithFormat:message arguments:arguments];
-    va_end(arguments);
-
-    NSLog(@"[%@] %@", level, str);
+void logMessage(NSString *level, NSString *message){
+    NSLog(@"[%@] %@", level, message);
 }
 @end

@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface LoggingUtils : NSObject
-void logError(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
-void logInfo(NSString *message, ...) NS_FORMAT_FUNCTION(1,2);
+void logError(NSString *message);
+void logInfo(NSString *message);
 @end
