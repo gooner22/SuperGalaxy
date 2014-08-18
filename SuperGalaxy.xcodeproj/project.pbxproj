@@ -14,7 +14,7 @@
 		276BFE1319A1F9F800AA791D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276BFE1219A1F9F800AA791D /* Images.xcassets */; };
 		276BFE1F19A1F9F900AA791D /* SuperGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 276BFE1E19A1F9F900AA791D /* SuperGalaxyTests.m */; };
 		2779438319A2373F00697E2B /* CGGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438219A2373F00697E2B /* CGGeometryUtils.m */; };
-		2779438C19A2379400697E2B /* GalacticSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438619A2379400697E2B /* GalacticSpiral.m */; };
+		2779438C19A2379400697E2B /* Galaxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438619A2379400697E2B /* Galaxy.m */; };
 		2779438D19A2379400697E2B /* GalaxyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438919A2379400697E2B /* GalaxyView.m */; };
 		2779438E19A2379400697E2B /* ScalableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438B19A2379400697E2B /* ScalableView.m */; };
 		2779439119A23A6400697E2B /* UIView+DrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779439019A23A6400697E2B /* UIView+DrawingUtils.m */; };
@@ -46,8 +46,8 @@
 		276BFE1E19A1F9F900AA791D /* SuperGalaxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperGalaxyTests.m; sourceTree = "<group>"; };
 		2779438119A2373F00697E2B /* CGGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGGeometryUtils.h; path = Utils/CGGeometryUtils.h; sourceTree = "<group>"; };
 		2779438219A2373F00697E2B /* CGGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CGGeometryUtils.m; path = Utils/CGGeometryUtils.m; sourceTree = "<group>"; };
-		2779438519A2379400697E2B /* GalacticSpiral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalacticSpiral.h; sourceTree = "<group>"; };
-		2779438619A2379400697E2B /* GalacticSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalacticSpiral.m; sourceTree = "<group>"; };
+		2779438519A2379400697E2B /* Galaxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Galaxy.h; sourceTree = "<group>"; };
+		2779438619A2379400697E2B /* Galaxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Galaxy.m; sourceTree = "<group>"; };
 		2779438819A2379400697E2B /* GalaxyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalaxyView.h; sourceTree = "<group>"; };
 		2779438919A2379400697E2B /* GalaxyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalaxyView.m; sourceTree = "<group>"; };
 		2779438A19A2379400697E2B /* ScalableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalableView.h; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		2779439019A23A6400697E2B /* UIView+DrawingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DrawingUtils.m"; path = "Category/UIView+DrawingUtils.m"; sourceTree = "<group>"; };
 		27BA67B619A225A900282A50 /* LoggingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingUtils.h; path = Utils/LoggingUtils.h; sourceTree = "<group>"; };
 		27BA67B719A225A900282A50 /* LoggingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingUtils.m; path = Utils/LoggingUtils.m; sourceTree = "<group>"; };
+		27BAD45D19A24B6200AB023E /* GalaxyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalaxyProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +142,9 @@
 		2779438419A2379400697E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2779438519A2379400697E2B /* GalacticSpiral.h */,
-				2779438619A2379400697E2B /* GalacticSpiral.m */,
+				2779438519A2379400697E2B /* Galaxy.h */,
+				2779438619A2379400697E2B /* Galaxy.m */,
+				27BAD45D19A24B6200AB023E /* GalaxyProtocol.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,7 +281,7 @@
 			files = (
 				276BFE0E19A1F9F800AA791D /* ViewController.m in Sources */,
 				2779438319A2373F00697E2B /* CGGeometryUtils.m in Sources */,
-				2779438C19A2379400697E2B /* GalacticSpiral.m in Sources */,
+				2779438C19A2379400697E2B /* Galaxy.m in Sources */,
 				2779438E19A2379400697E2B /* ScalableView.m in Sources */,
 				276BFE0B19A1F9F800AA791D /* AppDelegate.m in Sources */,
 				27BA67B819A225A900282A50 /* LoggingUtils.m in Sources */,

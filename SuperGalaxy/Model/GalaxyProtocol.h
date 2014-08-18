@@ -1,5 +1,5 @@
 //
-//  GalacticModel.h
+//  GalaxyProtocol.h
 //  SuperGalaxy
 //
 //  Created by Maksym Hontar on 18/08/14.
@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGGeometry.h>
 
-#define N M_PI*19
-
-@interface GalacticSpiral : NSObject
-CGPoint galacticPoint(float s);
+@protocol GalaxyProtocol <NSObject>
+@required
+- (NSUInteger)getNumberOfStarsInGalaxy;
+- (CGPoint)getStarLocationAtIndex:(int)indexOfStar;
 @end

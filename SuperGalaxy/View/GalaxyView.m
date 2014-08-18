@@ -7,7 +7,7 @@
 //
 
 #import "GalaxyView.h"
-#import "GalacticSpiral.h"
+#import "Galaxy.h"
 #import "LoggingUtils.h"
 #import "CGGeometryUtils.h"
 #import "UIView+DrawingUtils.h"
@@ -16,7 +16,6 @@
 #define kScatteringCoef 500.0f;
 
 @implementation GalaxyView
-
 
 - (void)drawRect:(CGRect)rect {
 
@@ -41,9 +40,15 @@
 - (int)drawGalactic:(CGContextRef)context rect:(CGRect)rect{
     CGPoint center = CGRectCenter(rect);
     int pointsCount = 0;
-    for (float s = 0.0; s < N; s+=0.01) {
+    if (!self.galaxyDelegate){
+        logError(@"delegate is nil");
+        return -1;
+    }
+    
+    NSUInteger stars = [self.galaxyDelegate getNumberOfStarsInGalaxy];
+    for (int i = 0; i < stars; i++) {
         CGFloat scatteringValue = self.scaleFactor * kScatteringCoef;
-        CGPoint anGalacticPoint = galacticPoint(s);
+        CGPoint anGalacticPoint = [self.galaxyDelegate getStarLocationAtIndex:i];;
         CGPoint galacticPointCentered = CGPointMake(center.x + scatteringValue * anGalacticPoint.x,
                                             center.y + scatteringValue * anGalacticPoint.y);
         // draw if visible for user

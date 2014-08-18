@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ScalableView.h"
+#import "GalaxyProtocol.h"
 
 @interface GalaxyView : ScalableView
-
+@property (weak) id<GalaxyProtocol> galaxyDelegate;
 @end
