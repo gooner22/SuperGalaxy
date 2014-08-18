@@ -11,7 +11,9 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet GalaxyView *galaxyView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet GalaxyView *galaxyView;
 
 @end
 

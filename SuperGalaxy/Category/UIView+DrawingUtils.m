@@ -9,8 +9,8 @@
 #import "UIView+DrawingUtils.h"
 
 @implementation UIView (DrawingUtils)
-- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context{
-    CGContextFillRect(context, CGRectMake(point.x,point.y,1,1));
+- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context borderWidth:(CGFloat)borderWidth{
+    CGContextFillRect(context, CGRectMake(point.x,point.y,borderWidth,borderWidth));
 }
 
 @end

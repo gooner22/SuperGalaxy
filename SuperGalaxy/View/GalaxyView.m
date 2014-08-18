@@ -13,14 +13,14 @@
 #import "UIView+DrawingUtils.h"
 #include <math.h>
 
-#define kScatteringCoef 500.0f;
+static CGFloat kScatteringCoef = 400.0f;
 
 @implementation GalaxyView
 
 - (void)drawRect:(CGRect)rect {
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor yellowColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
 
     NSDate *methodStart = [NSDate date];
     
@@ -30,6 +30,7 @@
     NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
     
     logInfo([NSString stringWithFormat:@"executionTime =%f; it=%d", executionTime, pointsCount]);
+
 }
 
 /**
@@ -45,18 +46,29 @@
         return -1;
     }
     
+    logInfo(NSStringFromCGRect(rect));
+    
+    CGFloat borderWidth = 1.0f;
+    
     NSUInteger stars = [self.galaxyDelegate getNumberOfStarsInGalaxy];
     for (int i = 0; i < stars; i++) {
-        CGFloat scatteringValue = self.scaleFactor * kScatteringCoef;
+        
+        CGFloat scatteringValue = kScatteringCoef * self.scaleFactor;
         CGPoint anGalacticPoint = [self.galaxyDelegate getStarLocationAtIndex:i];;
         CGPoint galacticPointCentered = CGPointMake(center.x + scatteringValue * anGalacticPoint.x,
                                             center.y + scatteringValue * anGalacticPoint.y);
-        // draw if visible for user
-        if (CGRectContainsPoint(rect, galacticPointCentered)){
-            [self drawPointAt:galacticPointCentered context:context];
-            pointsCount++;
+        if (i == 120){
+            logInfo([NSString stringWithFormat:@"%@", NSStringFromCGPoint(galacticPointCentered)]);
         }
+
+        // draw if visible for user
+//        if (CGRectContainsPoint(rect, galacticPointCentered)){
+        [self drawPointAt:galacticPointCentered context:context borderWidth:borderWidth];
+            pointsCount++;
+//        }
+
     }
+    
     return pointsCount;
 
 }

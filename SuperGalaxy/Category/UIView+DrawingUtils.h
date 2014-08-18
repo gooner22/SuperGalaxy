@@ -13,6 +13,6 @@
  * this is helper for drawing point
  */
 
-- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context;
+- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context borderWidth:(CGFloat)borderWidth;
 
 @end

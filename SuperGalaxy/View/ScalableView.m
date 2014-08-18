@@ -23,9 +23,24 @@
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame{
+    if(self = [super initWithFrame:frame]){
+        [self setup];
+    }
+    return self;
+}
+
 - (void)setup {
     _scaleFactor = 1.0;
     _oldScaleFactor = _scaleFactor;
+    
+    [self setBackgroundColor:[UIColor whiteColor]];
+}
+
+- (void)handleScaleChanged:(CGFloat)zoomScale{
+    [self setScaleFactor:self.scaleFactor+zoomScale-self.oldScaleFactor];
+    [self setOldScaleFactor: zoomScale];
+    [self setNeedsDisplay];
 }
 
 - (void)handlePinch:(UIPinchGestureRecognizer*)sender{

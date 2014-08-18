@@ -12,6 +12,7 @@
 // used to rememeber old scale value
 @property float scaleFactor;
 
+- (void)handleScaleChanged:(CGFloat)zoomScale;
 - (void)handlePinch:(UIPinchGestureRecognizer*)sender;
 
 @end
