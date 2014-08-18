@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		276BFE0819A1F9F800AA791D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 276BFE0719A1F9F800AA791D /* main.m */; };
+		276BFE0B19A1F9F800AA791D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 276BFE0A19A1F9F800AA791D /* AppDelegate.m */; };
+		276BFE0E19A1F9F800AA791D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276BFE0D19A1F9F800AA791D /* ViewController.m */; };
+		276BFE1119A1F9F800AA791D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276BFE0F19A1F9F800AA791D /* Main.storyboard */; };
+		276BFE1319A1F9F800AA791D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276BFE1219A1F9F800AA791D /* Images.xcassets */; };
+		276BFE1F19A1F9F900AA791D /* SuperGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 276BFE1E19A1F9F900AA791D /* SuperGalaxyTests.m */; };
+		2779438319A2373F00697E2B /* CGGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438219A2373F00697E2B /* CGGeometryUtils.m */; };
+		2779438C19A2379400697E2B /* GalacticSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438619A2379400697E2B /* GalacticSpiral.m */; };
+		2779438D19A2379400697E2B /* GalaxyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438919A2379400697E2B /* GalaxyView.m */; };
+		2779438E19A2379400697E2B /* ScalableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438B19A2379400697E2B /* ScalableView.m */; };
+		2779439119A23A6400697E2B /* UIView+DrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779439019A23A6400697E2B /* UIView+DrawingUtils.m */; };
+		27BA67B819A225A900282A50 /* LoggingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BA67B719A225A900282A50 /* LoggingUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		276BFE1919A1F9F900AA791D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 276BFDFA19A1F9F800AA791D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 276BFE0119A1F9F800AA791D;
+			remoteInfo = SuperGalaxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		276BFE0219A1F9F800AA791D /* SuperGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		276BFE0619A1F9F800AA791D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276BFE0719A1F9F800AA791D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		276BFE0919A1F9F800AA791D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		276BFE0A19A1F9F800AA791D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		276BFE0C19A1F9F800AA791D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		276BFE0D19A1F9F800AA791D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		276BFE1019A1F9F800AA791D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		276BFE1219A1F9F800AA791D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		276BFE1819A1F9F900AA791D /* SuperGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		276BFE1D19A1F9F900AA791D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276BFE1E19A1F9F900AA791D /* SuperGalaxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperGalaxyTests.m; sourceTree = "<group>"; };
+		2779438119A2373F00697E2B /* CGGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGGeometryUtils.h; path = Utils/CGGeometryUtils.h; sourceTree = "<group>"; };
+		2779438219A2373F00697E2B /* CGGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CGGeometryUtils.m; path = Utils/CGGeometryUtils.m; sourceTree = "<group>"; };
+		2779438519A2379400697E2B /* GalacticSpiral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalacticSpiral.h; sourceTree = "<group>"; };
+		2779438619A2379400697E2B /* GalacticSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalacticSpiral.m; sourceTree = "<group>"; };
+		2779438819A2379400697E2B /* GalaxyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalaxyView.h; sourceTree = "<group>"; };
+		2779438919A2379400697E2B /* GalaxyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalaxyView.m; sourceTree = "<group>"; };
+		2779438A19A2379400697E2B /* ScalableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalableView.h; sourceTree = "<group>"; };
+		2779438B19A2379400697E2B /* ScalableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalableView.m; sourceTree = "<group>"; };
+		2779438F19A23A6400697E2B /* UIView+DrawingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DrawingUtils.h"; path = "Category/UIView+DrawingUtils.h"; sourceTree = "<group>"; };
+		2779439019A23A6400697E2B /* UIView+DrawingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DrawingUtils.m"; path = "Category/UIView+DrawingUtils.m"; sourceTree = "<group>"; };
+		27BA67B619A225A900282A50 /* LoggingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingUtils.h; path = Utils/LoggingUtils.h; sourceTree = "<group>"; };
+		27BA67B719A225A900282A50 /* LoggingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingUtils.m; path = Utils/LoggingUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		276BFDFF19A1F9F800AA791D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276BFE1519A1F9F900AA791D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		276BFDF919A1F9F800AA791D = {
+			isa = PBXGroup;
+			children = (
+				276BFE0419A1F9F800AA791D /* SuperGalaxy */,
+				276BFE1B19A1F9F900AA791D /* SuperGalaxyTests */,
+				276BFE0319A1F9F800AA791D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		276BFE0319A1F9F800AA791D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				276BFE0219A1F9F800AA791D /* SuperGalaxy.app */,
+				276BFE1819A1F9F900AA791D /* SuperGalaxyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		276BFE0419A1F9F800AA791D /* SuperGalaxy */ = {
+			isa = PBXGroup;
+			children = (
+				2779439219A23A6A00697E2B /* Category */,
+				2779438419A2379400697E2B /* Model */,
+				2779438719A2379400697E2B /* View */,
+				27BA67B519A2257800282A50 /* Utils */,
+				276BFE0919A1F9F800AA791D /* AppDelegate.h */,
+				276BFE0A19A1F9F800AA791D /* AppDelegate.m */,
+				276BFE0C19A1F9F800AA791D /* ViewController.h */,
+				276BFE0D19A1F9F800AA791D /* ViewController.m */,
+				276BFE0F19A1F9F800AA791D /* Main.storyboard */,
+				276BFE1219A1F9F800AA791D /* Images.xcassets */,
+				276BFE0519A1F9F800AA791D /* Supporting Files */,
+			);
+			path = SuperGalaxy;
+			sourceTree = "<group>";
+		};
+		276BFE0519A1F9F800AA791D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				276BFE0619A1F9F800AA791D /* Info.plist */,
+				276BFE0719A1F9F800AA791D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		276BFE1B19A1F9F900AA791D /* SuperGalaxyTests */ = {
+			isa = PBXGroup;
+			children = (
+				276BFE1E19A1F9F900AA791D /* SuperGalaxyTests.m */,
+				276BFE1C19A1F9F900AA791D /* Supporting Files */,
+			);
+			path = SuperGalaxyTests;
+			sourceTree = "<group>";
+		};
+		276BFE1C19A1F9F900AA791D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				276BFE1D19A1F9F900AA791D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2779438419A2379400697E2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2779438519A2379400697E2B /* GalacticSpiral.h */,
+				2779438619A2379400697E2B /* GalacticSpiral.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2779438719A2379400697E2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2779438819A2379400697E2B /* GalaxyView.h */,
+				2779438919A2379400697E2B /* GalaxyView.m */,
+				2779438A19A2379400697E2B /* ScalableView.h */,
+				2779438B19A2379400697E2B /* ScalableView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2779439219A23A6A00697E2B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2779438F19A23A6400697E2B /* UIView+DrawingUtils.h */,
+				2779439019A23A6400697E2B /* UIView+DrawingUtils.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		27BA67B519A2257800282A50 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2779438119A2373F00697E2B /* CGGeometryUtils.h */,
+				2779438219A2373F00697E2B /* CGGeometryUtils.m */,
+				27BA67B619A225A900282A50 /* LoggingUtils.h */,
+				27BA67B719A225A900282A50 /* LoggingUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		276BFE0119A1F9F800AA791D /* SuperGalaxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276BFE2219A1F9F900AA791D /* Build configuration list for PBXNativeTarget "SuperGalaxy" */;
+			buildPhases = (
+				276BFDFE19A1F9F800AA791D /* Sources */,
+				276BFDFF19A1F9F800AA791D /* Frameworks */,
+				276BFE0019A1F9F800AA791D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperGalaxy;
+			productName = SuperGalaxy;
+			productReference = 276BFE0219A1F9F800AA791D /* SuperGalaxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		276BFE1719A1F9F900AA791D /* SuperGalaxyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276BFE2519A1F9F900AA791D /* Build configuration list for PBXNativeTarget "SuperGalaxyTests" */;
+			buildPhases = (
+				276BFE1419A1F9F900AA791D /* Sources */,
+				276BFE1519A1F9F900AA791D /* Frameworks */,
+				276BFE1619A1F9F900AA791D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				276BFE1A19A1F9F900AA791D /* PBXTargetDependency */,
+			);
+			name = SuperGalaxyTests;
+			productName = SuperGalaxyTests;
+			productReference = 276BFE1819A1F9F900AA791D /* SuperGalaxyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		276BFDFA19A1F9F800AA791D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = MH;
+				TargetAttributes = {
+					276BFE0119A1F9F800AA791D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					276BFE1719A1F9F900AA791D = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 276BFE0119A1F9F800AA791D;
+					};
+				};
+			};
+			buildConfigurationList = 276BFDFD19A1F9F800AA791D /* Build configuration list for PBXProject "SuperGalaxy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 276BFDF919A1F9F800AA791D;
+			productRefGroup = 276BFE0319A1F9F800AA791D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				276BFE0119A1F9F800AA791D /* SuperGalaxy */,
+				276BFE1719A1F9F900AA791D /* SuperGalaxyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		276BFE0019A1F9F800AA791D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276BFE1119A1F9F800AA791D /* Main.storyboard in Resources */,
+				276BFE1319A1F9F800AA791D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276BFE1619A1F9F900AA791D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		276BFDFE19A1F9F800AA791D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276BFE0E19A1F9F800AA791D /* ViewController.m in Sources */,
+				2779438319A2373F00697E2B /* CGGeometryUtils.m in Sources */,
+				2779438C19A2379400697E2B /* GalacticSpiral.m in Sources */,
+				2779438E19A2379400697E2B /* ScalableView.m in Sources */,
+				276BFE0B19A1F9F800AA791D /* AppDelegate.m in Sources */,
+				27BA67B819A225A900282A50 /* LoggingUtils.m in Sources */,
+				2779438D19A2379400697E2B /* GalaxyView.m in Sources */,
+				276BFE0819A1F9F800AA791D /* main.m in Sources */,
+				2779439119A23A6400697E2B /* UIView+DrawingUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276BFE1419A1F9F900AA791D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276BFE1F19A1F9F900AA791D /* SuperGalaxyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		276BFE1A19A1F9F900AA791D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 276BFE0119A1F9F800AA791D /* SuperGalaxy */;
+			targetProxy = 276BFE1919A1F9F900AA791D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		276BFE0F19A1F9F800AA791D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276BFE1019A1F9F800AA791D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		276BFE2019A1F9F900AA791D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		276BFE2119A1F9F900AA791D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		276BFE2319A1F9F900AA791D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SuperGalaxy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		276BFE2419A1F9F900AA791D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SuperGalaxy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		276BFE2619A1F9F900AA791D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SuperGalaxy.app/SuperGalaxy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuperGalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		276BFE2719A1F9F900AA791D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SuperGalaxy.app/SuperGalaxy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuperGalaxyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		276BFDFD19A1F9F800AA791D /* Build configuration list for PBXProject "SuperGalaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276BFE2019A1F9F900AA791D /* Debug */,
+				276BFE2119A1F9F900AA791D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276BFE2219A1F9F900AA791D /* Build configuration list for PBXNativeTarget "SuperGalaxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276BFE2319A1F9F900AA791D /* Debug */,
+				276BFE2419A1F9F900AA791D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276BFE2519A1F9F900AA791D /* Build configuration list for PBXNativeTarget "SuperGalaxyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276BFE2619A1F9F900AA791D /* Debug */,
+				276BFE2719A1F9F900AA791D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 276BFDFA19A1F9F800AA791D /* Project object */;
+}
