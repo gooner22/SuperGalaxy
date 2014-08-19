@@ -10,10 +10,6 @@
 #import "GalaxyView.h"
 
 @interface ViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-
 @property (weak, nonatomic) IBOutlet GalaxyView *galaxyView;
-
 @end
 

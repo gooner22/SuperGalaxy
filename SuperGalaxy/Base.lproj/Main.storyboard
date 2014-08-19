@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
@@ -8,36 +8,33 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BUo-wQ-YsW"/>
-                        <viewControllerLayoutGuide type="bottom" id="VmX-jy-qma"/>
-                    </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" maximumZoomScale="10" id="XiN-r7-Qju">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="Aed-xK-5P1">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-m2-8i4" customClass="GalaxyView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" id="9cR-MD-cJs">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="RTM-m2-8i4" secondAttribute="bottom" id="3js-SJ-FQ1"/>
-                            <constraint firstItem="RTM-m2-8i4" firstAttribute="centerX" secondItem="XiN-r7-Qju" secondAttribute="centerX" id="7Ei-Nd-3od"/>
-                            <constraint firstItem="RTM-m2-8i4" firstAttribute="leading" secondItem="XiN-r7-Qju" secondAttribute="leading" id="Ggx-p7-8Ef"/>
-                            <constraint firstItem="RTM-m2-8i4" firstAttribute="centerY" secondItem="XiN-r7-Qju" secondAttribute="centerY" id="MB8-Tt-77C"/>
-                            <constraint firstItem="RTM-m2-8i4" firstAttribute="top" secondItem="XiN-r7-Qju" secondAttribute="top" id="YPd-Zs-ZYK"/>
-                            <constraint firstAttribute="trailing" secondItem="RTM-m2-8i4" secondAttribute="trailing" id="mI5-c1-caD"/>
-                        </constraints>
-                    </scrollView>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
-                        <outlet property="galaxyView" destination="RTM-m2-8i4" id="UXE-Md-0Tv"/>
-                        <outlet property="scrollView" destination="XiN-r7-Qju" id="8HH-K2-ijt"/>
+                        <outlet property="scrollView" destination="9cR-MD-cJs" id="Gis-fd-s5r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="177.92000000000002" y="232.10666666666668"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="768" height="1024"/>
+            <size key="landscapeSize" width="1024" height="768"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
 </document>

@@ -19,6 +19,7 @@
 		2779438E19A2379400697E2B /* ScalableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779438B19A2379400697E2B /* ScalableView.m */; };
 		2779439119A23A6400697E2B /* UIView+DrawingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779439019A23A6400697E2B /* UIView+DrawingUtils.m */; };
 		27BA67B819A225A900282A50 /* LoggingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BA67B719A225A900282A50 /* LoggingUtils.m */; };
+		27FD009C19A28476002C7832 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FD009A19A28476002C7832 /* Main2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		27BA67B619A225A900282A50 /* LoggingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggingUtils.h; path = Utils/LoggingUtils.h; sourceTree = "<group>"; };
 		27BA67B719A225A900282A50 /* LoggingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggingUtils.m; path = Utils/LoggingUtils.m; sourceTree = "<group>"; };
 		27BAD45D19A24B6200AB023E /* GalaxyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalaxyProtocol.h; sourceTree = "<group>"; };
+		27FD009B19A28476002C7832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				276BFE0C19A1F9F800AA791D /* ViewController.h */,
 				276BFE0D19A1F9F800AA791D /* ViewController.m */,
 				276BFE0F19A1F9F800AA791D /* Main.storyboard */,
+				27FD009A19A28476002C7832 /* Main2.storyboard */,
 				276BFE1219A1F9F800AA791D /* Images.xcassets */,
 				276BFE0519A1F9F800AA791D /* Supporting Files */,
 			);
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276BFE1119A1F9F800AA791D /* Main.storyboard in Resources */,
+				27FD009C19A28476002C7832 /* Main2.storyboard in Resources */,
 				276BFE1319A1F9F800AA791D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +320,14 @@
 				276BFE1019A1F9F800AA791D /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27FD009A19A28476002C7832 /* Main2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FD009B19A28476002C7832 /* Base */,
+			);
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

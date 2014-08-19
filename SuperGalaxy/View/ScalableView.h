@@ -11,8 +11,10 @@
 @interface ScalableView : UIView
 // used to rememeber old scale value
 @property float scaleFactor;
+@property CGPoint locationPoint;
+@property CGPoint centerPoint;
+@property CGPoint oldCenterPoint;
+@property float zoomScale;
 
-- (void)handleScaleChanged:(CGFloat)zoomScale;
 - (void)handlePinch:(UIPinchGestureRecognizer*)sender;
-
 @end

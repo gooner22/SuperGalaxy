@@ -12,7 +12,7 @@
 /**
  * this is helper for drawing point
  */
-
-- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context borderWidth:(CGFloat)borderWidth;
-
+- (void)drawPointAt:(CGPoint)point context:(CGContextRef)context border:(CGFloat)border;
+- (void)drawElipseAtPoint:(CGPoint)point context:(CGContextRef)context border:(CGFloat)border;
+- (UIColor*)randomColor;
 @end

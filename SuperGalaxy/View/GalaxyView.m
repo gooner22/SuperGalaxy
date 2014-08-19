@@ -13,15 +13,14 @@
 #import "UIView+DrawingUtils.h"
 #include <math.h>
 
-static CGFloat kScatteringCoef = 400.0f;
+static CGFloat kScatteringCoef = 500.0f;
 
 @implementation GalaxyView
 
 - (void)drawRect:(CGRect)rect {
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-
+    CGContextSetLineWidth(context, 1.0);
     NSDate *methodStart = [NSDate date];
     
     int pointsCount = [self drawGalactic:context rect:rect];
@@ -38,37 +37,49 @@ static CGFloat kScatteringCoef = 400.0f;
  *  
  * @returns number of points drawn
  */
+
 - (int)drawGalactic:(CGContextRef)context rect:(CGRect)rect{
-    CGPoint center = CGRectCenter(rect);
-    int pointsCount = 0;
     if (!self.galaxyDelegate){
         logError(@"delegate is nil");
         return -1;
     }
-    
-    logInfo(NSStringFromCGRect(rect));
-    
-    CGFloat borderWidth = 1.0f;
-    
+
+    CGFloat x = self.center.x;
+    CGFloat y = self.center.y;
+    if(!CGPointEqualToPoint(self.locationPoint, CGPointZero)){
+        x = self.locationPoint.x + (self.centerPoint.x - self.locationPoint.x) * self.zoomScale;
+        y = self.locationPoint.y + (self.centerPoint.y - self.locationPoint.y) * self.zoomScale;
+
+        [self setOldCenterPoint:CGPointMake(x, y)];
+    } else{
+        [self setCenterPoint:self.center];
+        [self setOldCenterPoint:self.center];
+    }
+
+    int pointsCount = 0;
     NSUInteger stars = [self.galaxyDelegate getNumberOfStarsInGalaxy];
     for (int i = 0; i < stars; i++) {
         
         CGFloat scatteringValue = kScatteringCoef * self.scaleFactor;
-        CGPoint anGalacticPoint = [self.galaxyDelegate getStarLocationAtIndex:i];;
-        CGPoint galacticPointCentered = CGPointMake(center.x + scatteringValue * anGalacticPoint.x,
-                                            center.y + scatteringValue * anGalacticPoint.y);
-        if (i == 120){
-            logInfo([NSString stringWithFormat:@"%@", NSStringFromCGPoint(galacticPointCentered)]);
-        }
+        CGPoint anGalacticPoint = [self.galaxyDelegate getStarLocationAtIndex:i];
+        
+        CGPoint galacticPointCentered = CGPointMake(floorf(x + scatteringValue * anGalacticPoint.x),
+                                            floorf(y + scatteringValue * anGalacticPoint.y));
 
         // draw if visible for user
-//        if (CGRectContainsPoint(rect, galacticPointCentered)){
-        [self drawPointAt:galacticPointCentered context:context borderWidth:borderWidth];
-            pointsCount++;
-//        }
+        if (CGRectContainsPoint(rect, galacticPointCentered)){
+            CGContextSetFillColorWithColor(context, [self randomColor].CGColor);
+            [self drawElipseAtPoint:galacticPointCentered context:context border:(2.0f * self.scaleFactor/1.5)];
+            pointsCount++;        
+        }
 
     }
     
+    if(self.zoomScale != 1){
+        CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+        [self drawPointAt:self.locationPoint context:context border:10.0f];
+    }
+
     return pointsCount;
 
 }
