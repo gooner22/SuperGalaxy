@@ -13,10 +13,23 @@
 #import "UIView+DrawingUtils.h"
 #include <math.h>
 
+@interface GalaxyView()
+@property (strong) NSArray* colors;
+@end
 static CGFloat kScatteringCoef = 500.0f;
 
 @implementation GalaxyView
 
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]){
+        NSMutableArray *aColors = [NSMutableArray array];
+        for (int i=0; i<50; i++) {
+            [aColors addObject:[self randomColor]];
+        }
+        _colors = aColors;
+    }
+    return self;
+}
 - (void)drawRect:(CGRect)rect {
 
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -68,16 +81,16 @@ static CGFloat kScatteringCoef = 500.0f;
 
         // draw if visible for user
         if (CGRectContainsPoint(rect, galacticPointCentered)){
-            CGContextSetFillColorWithColor(context, [self randomColor].CGColor);
-            [self drawElipseAtPoint:galacticPointCentered context:context border:(2.0f * self.scaleFactor/1.5)];
-            pointsCount++;        
+            CGContextSetFillColorWithColor(context, [(UIColor*)[[self colors] objectAtIndex:arc4random() % [[self colors] count]]CGColor]);
+            [self drawPointAt:galacticPointCentered context:context border:(2.0f * self.scaleFactor/1.5)];
+            pointsCount++;
         }
 
     }
     
     if(self.zoomScale != 1){
         CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-        [self drawPointAt:self.locationPoint context:context border:10.0f];
+        [self drawElipseAtPoint:self.locationPoint context:context border:10.0f];
     }
 
     return pointsCount;
